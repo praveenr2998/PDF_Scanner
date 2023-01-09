@@ -1,0 +1,35 @@
+{
+    "os": "Linux-5.15.0-56-generic-x86_64-with-glibc2.29",
+    "python": "3.8.10",
+    "heartbeatAt": "2022-12-30T18:31:07.336692",
+    "startedAt": "2022-12-30T18:31:05.692790",
+    "docker": null,
+    "gpu": "NVIDIA GeForce GTX 1660 Ti",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [
+        "--img",
+        "640",
+        "--batch",
+        "16",
+        "--epochs",
+        "40",
+        "--data",
+        "data.yaml",
+        "--weights",
+        "yolov5s.pt"
+    ],
+    "state": "running",
+    "codePath": "train.py",
+    "program": "train.py",
+    "git": {
+        "remote": "https://github.com/ultralytics/yolov5",
+        "commit": "65071da7181e2ede9d3514f20c88e6bd646af07c"
+    },
+    "email": "praveenr2998@gmail.com",
+    "root": "/home/praveen/Desktop/Projects/PDF_Scanner/yolov5",
+    "host": "praveen-GL75-9SDK",
+    "username": "praveen",
+    "executable": "/usr/bin/python3"
+}

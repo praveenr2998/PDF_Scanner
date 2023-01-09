@@ -1,0 +1,18 @@
+
+Dataset not found ⚠️, missing paths ['/home/praveen/Desktop/Projects/PDF_Scanner/yolov5/Document-Sacnner-1/valid/images']
+Traceback (most recent call last):
+  File "train.py", line 634, in <module>
+    main(opt)
+  File "train.py", line 528, in main
+    train(opt.hyp, opt, device, callbacks)
+  File "train.py", line 95, in train
+    loggers = Loggers(save_dir, weights, opt, hyp, LOGGER)  # loggers instance
+  File "/home/praveen/Desktop/Projects/PDF_Scanner/yolov5/utils/loggers/__init__.py", line 111, in __init__
+    self.wandb = WandbLogger(self.opt, run_id)
+  File "/home/praveen/Desktop/Projects/PDF_Scanner/yolov5/utils/loggers/wandb/wandb_utils.py", line 192, in __init__
+    self.data_dict = check_wandb_dataset(opt.data)
+  File "/home/praveen/Desktop/Projects/PDF_Scanner/yolov5/utils/loggers/wandb/wandb_utils.py", line 59, in check_wandb_dataset
+    return check_dataset(data_file)
+  File "/home/praveen/Desktop/Projects/PDF_Scanner/yolov5/utils/general.py", line 542, in check_dataset
+    raise Exception('Dataset not found ❌')
+Exception: Dataset not found ❌
