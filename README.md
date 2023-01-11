@@ -7,5 +7,5 @@
 ![Directory](https://github.com/praveenr2998/PDF_Scanner/blob/main/Readme%20Images/directory%20structure.png?raw=true)
 
 ## SETUP AND EXECUTION 
-After cloning the repository
+After cloning the repository  
 **cd PDF_Scanner**
