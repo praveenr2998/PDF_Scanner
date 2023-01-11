@@ -8,4 +8,6 @@
 
 ## SETUP AND EXECUTION 
 After cloning the repository  
-**cd PDF_Scanner**
+```
+cd PDF_Scanner
+```
