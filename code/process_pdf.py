@@ -100,8 +100,8 @@ class processPdf:
         # Clearing up exp directory so that in each iteration no images are present inside it using CLI command
         shutil.rmtree("runs/detect/exp")
         
-        # Yolo produces cropped pages having just one bbox per image and accuracy greater than 90% or 0.9 so anything less than 0.9 or 90% is not processed and the source image is stitched back to 
-        # resultant PDF
+        # Yolo produces cropped pages having just one bbox per image and accuracy greater than 90% or 0.9 so anything less than 0.9 or 
+        # 90% is not processed and the source image is stitched back to resultant PDF
         execution_cmd = "python3 detect.py --weights best.pt --source " + unprocessed_img_dir + " --save-crop"
         subprocess.run(execution_cmd.split(" "))
 
