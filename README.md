@@ -15,3 +15,5 @@ python3 -m venv venv
 source venv/bin.activate
 pip3 install -r requirements.txt 
 ```
+![Config](https://github.com/praveenr2998/PDF_Scanner/blob/main/Readme%20Images/Config.png?raw=true)
+
