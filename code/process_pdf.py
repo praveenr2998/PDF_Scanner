@@ -42,7 +42,7 @@ class processPdf:
 
 
         os.chdir("../data/output/")
-        processed_image_list[0].save(f'{source_file_path.split("/")[-1]}', save_all=True, append_images=processed_image_list[1 : -1])
+        processed_image_list[0].save(f'{source_file_path.split("/")[-1]}', save_all=True, append_images=processed_image_list[1 : ])
         os.chdir("../../code/")
 
     def rotate_image(self, img, angle_of_rotation):
@@ -109,7 +109,7 @@ class processPdf:
                 processed_image_list.append(pil_image)
         
         os.chdir("../../data/output")
-        processed_image_list[0].save(f'{source_file_path.split("/")[-1]}', save_all=True, append_images=processed_image_list[1 : -1])
+        processed_image_list[0].save(f'{source_file_path.split("/")[-1]}', save_all=True, append_images=processed_image_list[1 : ])
         os.chdir("../../code/")
 
 
@@ -142,7 +142,9 @@ processPdf_obj = processPdf()
 for key in config_dict:
     if config_dict[key]['type_of_split'] == 'NORMAL': 
         print("######### Processing PDFs Normally #########")
+        print(f"Processing ========> {config_dict[key]['file_path']}")
         processPdf_obj.classic_process(source_file_path = config_dict[key]['file_path'], skip_pages = config_dict[key]['skip_pages'], angle_of_rotation = config_dict[key]['rotation'])
     else:
         print("######### Processing PDFs Using AI #########")
+        print(f"Processing ========> {config_dict[key]['file_path']}")
         processPdf_obj.ai_process(source_file_path = config_dict[key]['file_path'], skip_pages = config_dict[key]['skip_pages'], angle_of_rotation = config_dict[key]['rotation'])
