@@ -15,6 +15,15 @@ class processPdf:
         pass
 
     def classic_process(self, source_file_path, skip_pages, angle_of_rotation = None):
+        """
+        Used to process PDFs normally, takes a page from PDF, applies rotation if necessary, splits page into half
+        and stitches the split pages back to a PDF.
+
+        :param source_file_path  : String - Source path of PDF file
+        :param skip_pages        : Int - The int(page count) given here will be skipped in the PDF file
+        :param angle_of_rotation : String - Options - L/R/None, left/right/no rotation for each page in the PDF
+        """
+
         self.images = convert_from_path(source_file_path)
         processed_image_list = []
         
@@ -46,6 +55,13 @@ class processPdf:
         os.chdir("../../code/")
 
     def rotate_image(self, img, angle_of_rotation):
+        """
+        Used to rotate the pages in PDF. Only 90 degree clockwise and 90 degree counter-clockwise rotation is done
+
+        :param img               : cv2 image - The image to be rotated as a cv2 image
+        :param angle_of_rotation : String - Options - L/R/None, left/right/no rotation for each page in the PDF
+        """
+
         if angle_of_rotation == 'L':
             image = cv2.rotate(img, cv2.ROTATE_90_COUNTERCLOCKWISE)
         if angle_of_rotation == 'R':
@@ -54,6 +70,15 @@ class processPdf:
         return image
 
     def ai_process(self, source_file_path, skip_pages, angle_of_rotation = None):
+        """
+        Used to process PDFs using computer vision algorithms, takes a page from PDF, applies rotation if necessary, splits page into half
+        and stitches the split pages back to a PDF.
+
+        :param source_file_path  : String - Source path of PDF file
+        :param skip_pages        : Int - The int(page count) given here will be skipped in the PDF file
+        :param angle_of_rotation : String - Options - L/R/None, left/right/no rotation for each page in the PDF
+        """
+
         self.images = convert_from_path(source_file_path)
         os.chdir("../data/unprocessed_images/")
         direct = os.getcwd()
@@ -111,27 +136,6 @@ class processPdf:
         os.chdir("../../data/output")
         processed_image_list[0].save(f'{source_file_path.split("/")[-1]}', save_all=True, append_images=processed_image_list[1 : ])
         os.chdir("../../code/")
-
-
-            
-
-
-
-
-
-
-
-
-        
-            
-             
-
-
-
-
-
-  
-
 
 
 
