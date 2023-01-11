@@ -30,3 +30,9 @@ After the config is updated
 cd code
 python3 process_pdf.py
 ```
+
+## FUTURE WORK
+1. Adding optional split functionality
+2. Better accuracy while cropping images
+3. Find orientation of pages in PDF automatically
+4. Parallely processing PDFs 
