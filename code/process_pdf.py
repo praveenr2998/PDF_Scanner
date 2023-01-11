@@ -43,6 +43,7 @@ class processPdf:
 
         os.chdir("../data/output/")
         processed_image_list[0].save(f'{source_file_path.split("/")[-1]}', save_all=True, append_images=processed_image_list[1 : -1])
+        os.chdir("../../code/")
 
     def rotate_image(self, img, angle_of_rotation):
         if angle_of_rotation == 'L':
@@ -109,6 +110,7 @@ class processPdf:
         
         os.chdir("../../data/output")
         processed_image_list[0].save(f'{source_file_path.split("/")[-1]}', save_all=True, append_images=processed_image_list[1 : -1])
+        os.chdir("../../code/")
 
 
             
