@@ -23,4 +23,10 @@ pip3 install -r requirements.txt
 **split**         - Currently this parameter is dormant, the image will split by default  
 **type_of_split** - Normal split or split after cropping page using AI  
 **skip_pages**    - If title/index page need not be processed they can be skipped by entering number of pages to be skipped here  
+  
 
+After the config is updated 
+```
+cd code
+python3 process_pdf.py
+```
