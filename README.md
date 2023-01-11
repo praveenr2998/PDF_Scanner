@@ -15,5 +15,12 @@ python3 -m venv venv
 source venv/bin.activate
 pip3 install -r requirements.txt 
 ```
-![Config](https://github.com/praveenr2998/PDF_Scanner/blob/main/Readme%20Images/Config.png?raw=true)
+#### config.py
+![Config](https://github.com/praveenr2998/PDF_Scanner/blob/main/Readme%20Images/Config.png?raw=true)  
+
+**file_path**     - Complete path of the PDF file to be processed   
+**rotation**      - Rotation for each page, only 90 degree clockwise and 90 degree counter-clockwise rotation   
+**split**         - Currently this parameter is dormant, the image will split by default  
+**type_of_split** - Normal split or split after cropping page using AI  
+**skip_pages**    - If title/index page need not be processed they can be skipped by entering number of pages to be skipped here  
 
