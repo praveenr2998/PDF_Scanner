@@ -30,6 +30,11 @@ After the config is updated
 cd code
 python3 process_pdf.py
 ```
+## YOLO SPECIFIC CONFIGURATIONS
+https://github.com/ultralytics/yolov5 - YOLOv5s is the model used for cropping pages  
+Slight modifications are done to **code/yolov5/detect.py**  
+The number of predictions perimage is limited to **1**  
+Only if the accuracy is greater than 90 or 0.9 the page is cropped or else the source image is unaltered
 
 ## FUTURE WORK
 1. Adding optional split functionality
