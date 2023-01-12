@@ -30,6 +30,9 @@ After the config is updated
 cd code
 python3 process_pdf.py
 ```
+##OUTPUT
+The output is generated as a PDF file and is stored in **../PDF_Scanner/data/output/** directory
+
 ## YOLO SPECIFIC CONFIGURATIONS
 https://github.com/ultralytics/yolov5 - YOLOv5s is the model used for cropping pages  
 Slight modifications are done to **code/yolov5/detect.py**  
