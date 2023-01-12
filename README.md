@@ -30,7 +30,7 @@ After the config is updated
 cd code
 python3 process_pdf.py
 ```
-##OUTPUT
+## OUTPUT
 The output is generated as a PDF file and is stored in **../PDF_Scanner/data/output/** directory
 
 ## YOLO SPECIFIC CONFIGURATIONS
